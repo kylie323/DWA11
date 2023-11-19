@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Count App</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/dark.css"
+/>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/components/button/button.js"></script>
+    <script src="scripts.js" defer></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            color: #A4A8D1;
+        }
+
+        #counter {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 20%;
+        }
+
+        sl-button::part(base) {
+            border-color: #A4A8D1;
+        }
+
+        sl-button::part(base):hover {
+            background-color: #A4A8D1;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tally Counter App</h1>
+    
+    <div id="counter">0</div>
+ 
+    <sl-button variant="default" 
+    style="width:30%; margin-bottom: 1rem;"  
+    size="large" 
+    onclick="subtractCounter()">Subtract</sl-button>
+
+    <sl-button variant="default" 
+    style="width:30%; margin-bottom: 1rem;" 
+    size="large" onclick="addCounter()">Add</sl-button>
+
+    <br>
+
+    <sl-button variant="default" 
+    style="width:60%;" 
+    size="large" onclick="resetCounter()">Reset</sl-button>
+ 
+</body>
+<footer>
+    Inspired by
+    <a class="footer__link" href="https://tallycount.app/">Tally Count</a>.
+  </footer>
+</html>
